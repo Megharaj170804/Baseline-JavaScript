@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Keywords and Identifiers</title>
+    
+</head>
+<body>
+    <h1>JavaScript Keywords and Identifiers</h1>
+    
+    <div class="section">
+        <h2>What are Keywords?</h2>
+        <p>
+            <b>Keywords</b> are reserved words in JavaScript that have special meaning. You cannot use them as variable names.
+        </p>
+        <ul>
+            <li><code>var</code></li>
+            <li><code>let</code></li>
+            <li><code>const</code></li>
+            <li><code>function</code></li>
+            <li><code>if</code></li>
+            <li><code>else</code></li>
+            <li><code>return</code></li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>What are Identifiers?</h2>
+        <p>
+            <b>Identifiers</b> are names given to variables, functions, and objects. They must start with a letter, <code>_</code>, or <code>$</code>, and cannot be a keyword.
+        </p>
+        <div class="example">
+            <code>
+                let name;<br>
+                const $amount = 100;<br>
+                function myFunction() { }
+            </code>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Try it Yourself!</h2>
+        <p>Type a name below to check if it's a valid identifier:</p>
+        <input type="text" id="identifierInput" placeholder="Enter identifier">
+        <button onclick="checkIdentifier()">Check</button>
+        <p id="result"></p>
+    </div>
+    
+    <script>
+        
+        const keywords = [
+            "break", "case", "catch", "class", "const", "continue", "debugger", "default",
+            "delete", "do", "else", "export", "extends", "finally", "for", "function",
+            "if", "import", "in", "instanceof", "let", "new", "return", "super", "switch",
+            "this", "throw", "try", "typeof", "var", "void", "while", "with", "yield"
+        ];
+
+        function checkIdentifier() {
+            const input = document.getElementById('identifierInput').value.trim();
+            const result = document.getElementById('result');
+            if (!input) {
+                result.textContent = "Please enter an identifier.";
+                result.style.color = "red";
+                return;
+            }
+            if (keywords.includes(input)) {
+                result.textContent = `"${input}" is a keyword and cannot be used as an identifier.`;
+                result.style.color = "red";
+                return;
+            }
+            // Identifier rules: starts with letter, $, or _, and contains only letters, digits, $, _
+            if (/^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(input)) {
+                result.textContent = `"${input}" is a valid identifier.`;
+                result.style.color = "green";
+            } else {
+                result.textContent = `"${input}" is NOT a valid identifier.`;
+                result.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

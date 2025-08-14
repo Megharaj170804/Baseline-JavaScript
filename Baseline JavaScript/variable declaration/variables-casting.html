@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Variables, Declaration, and Casting</title>
+    <script src="script.js"></script>
+   
+</head>
+<body>
+    <h1>JavaScript Variables, Declaration, and Casting</h1>
+    <div class="section">
+        <h2>Variable Declaration</h2>
+        <p>Variables in JavaScript can be declared using <code>var</code>, <code>let</code>, or <code>const</code>:</p>
+        <ul>
+            <li><code>var</code>: Function-scoped, can be re-declared and updated.</li>
+            <li><code>let</code>: Block-scoped, can be updated but not re-declared in the same scope.</li>
+            <li><code>const</code>: Block-scoped, cannot be updated or re-declared. Must be initialized at declaration.</li>
+        </ul>
+    </div>
+    <div class="section">
+        <h2>Type Casting (Conversion)</h2>
+        <p>JavaScript allows you to convert (cast) data from one type to another:</p>
+        <ul>
+            <li><b>String to Number:</b> <code>Number("123")</code></li>
+            <li><b>Number to String:</b> <code>String(123)</code> or <code>123.toString()</code></li>
+            <li><b>Any to Boolean:</b> <code>Boolean(value)</code></li>
+            <li><b>Parse Int/Float:</b> <code>parseInt("123")</code>, <code>parseFloat("123.45")</code></li>
+        </ul>
+    </div>
+    <div class="section">
+        <h2>Examples</h2>
+        <ul>
+            <li id="varEx"></li>
+            <li id="letEx"></li>
+            <li id="constEx"></li>
+            <li id="castEx1"></li>
+            <li id="castEx2"></li>
+            <li id="castEx3"></li>
+        </ul>
+    </div>
+    <script>
+        window.onload = function() {
+            showVariableExamples();
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Null and Undefined Values</title>
+    <script src="script.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #2c3e50; }
+        .section { background: #f4f4f4; padding: 16px; border-radius: 8px; margin-bottom: 20px; }
+        code { background: #eaeaea; padding: 2px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Null and Undefined Values</h1>
+    <div class="section">
+        <h2>What is <code>null</code>?</h2>
+        <p><code>null</code> is a special value in JavaScript that represents "no value" or "empty value". It is intentionally assigned to a variable to indicate that it has no value.</p>
+    </div>
+    <div class="section">
+        <h2>What is <code>undefined</code>?</h2>
+        <p><code>undefined</code> means a variable has been declared but has not yet been assigned a value. It is the default value for uninitialized variables.</p>
+    </div>
+    <div class="section">
+        <h2>Examples</h2>
+        <ul>
+            <li id="nullEx"></li>
+            <li id="undefinedEx"></li>
+            <li id="typeofNull"></li>
+            <li id="typeofUndefined"></li>
+        </ul>
+    </div>
+    <script>
+        window.onload = function() {
+            showNullUndefinedExamples();
+        };
+    </script>
+</body>
+</html>
