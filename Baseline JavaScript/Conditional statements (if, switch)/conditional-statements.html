@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Conditional Statements (if, switch)</title>
+    <script src="conditional-statements.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #2c3e50; }
+        .section { background: #f4f4f4; padding: 16px; border-radius: 8px; margin-bottom: 20px; }
+        code { background: #eaeaea; padding: 2px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Conditional Statements (if, switch)</h1>
+    <div class="section">
+        <h2>if Statement</h2>
+        <p>The <code>if</code> statement is used to execute code based on a condition.</p>
+        <pre><code>if (condition) {
+    // code to run if condition is true
+} else {
+    // code to run if condition is false
+}</code></pre>
+    </div>
+    <div class="section">
+        <h2>switch Statement</h2>
+        <p>The <code>switch</code> statement is used to select one of many code blocks to be executed.</p>
+        <pre><code>switch (expression) {
+    case value1:
+        // code for value1
+        break;
+    case value2:
+        // code for value2
+        break;
+    default:
+        // code if no case matches
+}</code></pre>
+    </div>
+    <div class="section">
+        <h2>Examples</h2>
+        <ul>
+            <li id="ifEx"></li>
+            <li id="switchEx"></li>
+        </ul>
+    </div>
+    <script>
+        window.onload = function() {
+            showConditionalExamples();
+        };
+    </script>
+</body>
+</html>

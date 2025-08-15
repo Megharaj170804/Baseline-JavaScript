@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Collections</title>
+    <script src="collections.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #2c3e50; }
+        .section { background: #f4f4f4; padding: 16px; border-radius: 8px; margin-bottom: 20px; }
+        code { background: #eaeaea; padding: 2px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Collections</h1>
+    <div class="section">
+        <h2>What are Collections?</h2>
+        <p>Collections in JavaScript are objects that group multiple values together. The most common collections are <b>Array</b>, <b>Set</b>, and <b>Map</b>.</p>
+    </div>
+    <div class="section">
+        <h2>Array</h2>
+        <p>An <code>Array</code> is an ordered list of values. You can access elements by their index.</p>
+        <pre><code>let arr = [1, 2, 3];</code></pre>
+    </div>
+    <div class="section">
+        <h2>Set</h2>
+        <p>A <code>Set</code> is a collection of unique values. No duplicates allowed.</p>
+        <pre><code>let set = new Set([1, 2, 3, 2]); // Set {1, 2, 3}</code></pre>
+    </div>
+    <div class="section">
+        <h2>Map</h2>
+        <p>A <code>Map</code> is a collection of key-value pairs. Keys can be any type.</p>
+        <pre><code>let map = new Map();
+map.set('a', 1);
+map.set('b', 2);</code></pre>
+    </div>
+    <div class="section">
+        <h2>Examples</h2>
+        <ul>
+            <li id="arrayEx"></li>
+            <li id="setEx"></li>
+            <li id="mapEx"></li>
+        </ul>
+    </div>
+    <script>
+        window.onload = function() {
+            showCollectionsExamples();
+        };
+    </script>
+</body>
+</html>

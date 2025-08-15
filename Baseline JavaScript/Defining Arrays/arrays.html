@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Arrays: Defining, Initializing, Iterating</title>
+    <script src="arrays.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #2c3e50; }
+        .section { background: #f4f4f4; padding: 16px; border-radius: 8px; margin-bottom: 20px; }
+        code { background: #eaeaea; padding: 2px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Arrays: Defining, Initializing, Iterating</h1>
+    <div class="section">
+        <h2>Defining and Initializing Arrays</h2>
+        <p>An array is a special variable that can hold more than one value at a time.</p>
+        <pre><code>let fruits = ["apple", "banana", "cherry"];
+let numbers = new Array(1, 2, 3, 4);
+</code></pre>
+    </div>
+    <div class="section">
+        <h2>Length of Array</h2>
+        <p>The <code>length</code> property returns the number of elements in an array.</p>
+        <pre><code>fruits.length; // 3</code></pre>
+    </div>
+    <div class="section">
+        <h2>Iterating Over Arrays</h2>
+        <p>You can use loops to go through each element in an array:</p>
+        <pre><code>// Using for loop
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
+
+// Using forEach
+fruits.forEach(function(fruit) {
+    console.log(fruit);
+});</code></pre>
+    </div>
+    <div class="section">
+        <h2>Examples</h2>
+        <ul>
+            <li id="defineEx"></li>
+            <li id="lengthEx"></li>
+            <li id="forLoopEx"></li>
+            <li id="forEachEx"></li>
+        </ul>
+    </div>
+    <script>
+        window.onload = function() {
+            showArrayExamples();
+        };
+    </script>
+</body>
+</html>
