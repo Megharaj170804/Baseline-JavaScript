@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Template Literals</title>
+    <script src="template-literals.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #2c3e50; }
+        .section { background: #f4f4f4; padding: 16px; border-radius: 8px; margin-bottom: 20px; }
+        code { background: #eaeaea; padding: 2px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Template Literals</h1>
+    <div class="section">
+        <h2>What are Template Literals?</h2>
+        <p>Template literals are string literals allowing embedded expressions. They are enclosed by backticks (<code>`</code>) instead of single or double quotes.</p>
+        <pre><code>let name = "Alice";
+let greeting = `Hello, ${name}!`;
+</code></pre>
+    </div>
+    <div class="section">
+        <h2>Features of Template Literals</h2>
+        <ul>
+            <li>Multi-line strings</li>
+            <li>String interpolation (embedding variables and expressions)</li>
+            <li>Expression evaluation inside <code>${...}</code></li>
+        </ul>
+    </div>
+    <div class="section">
+        <h2>Examples</h2>
+        <ul>
+            <li id="simpleEx"></li>
+            <li id="multiLineEx"></li>
+            <li id="expressionEx"></li>
+        </ul>
+    </div>
+    <script>
+        window.onload = function() {
+            showTemplateLiteralExamples();
+        };
+    </script>
+</body>
+</html>

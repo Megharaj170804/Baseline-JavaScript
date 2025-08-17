@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Iterator Protocol</title>
+    <script src="iterator-protocol.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #2c3e50; }
+        .section { background: #f4f4f4; padding: 16px; border-radius: 8px; margin-bottom: 20px; }
+        code { background: #eaeaea; padding: 2px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Iterator Protocol</h1>
+    <div class="section">
+        <h2>What is the Iterator Protocol?</h2>
+        <p>The <b>iterator protocol</b> allows JavaScript objects to define or customize their iteration behavior, such as what values are looped over in a <code>for...of</code> loop.</p>
+        <p>An object is an iterator if it has a <code>next()</code> method that returns an object with <code>value</code> and <code>done</code> properties.</p>
+    </div>
+    <div class="section">
+        <h2>Built-in Iterables</h2>
+        <p>Arrays, Strings, Maps, Sets, and more are built-in iterables in JavaScript.</p>
+        <pre><code>for (let value of [1, 2, 3]) {
+    console.log(value);
+}</code></pre>
+    </div>
+    <div class="section">
+        <h2>Custom Iterator Example</h2>
+        <pre><code>let myIterable = {
+    [Symbol.iterator]: function() {
+        let step = 0;
+        return {
+            next: function() {
+                step++;
+                if (step === 1) return { value: 'a', done: false };
+                if (step === 2) return { value: 'b', done: false };
+                return { value: undefined, done: true };
+            }
+        };
+    }
+};
+for (let value of myIterable) {
+    console.log(value);
+}</code></pre>
+    </div>
+    <div class="section">
+        <h2>Examples</h2>
+        <ul>
+            <li id="arrayEx"></li>
+            <li id="customEx"></li>
+        </ul>
+    </div>
+    <script>
+        window.onload = function() {
+            showIteratorExamples();
+        };
+    </script>
+</body>
+</html>
