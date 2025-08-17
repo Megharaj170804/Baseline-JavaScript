@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Objects and Object Arrays</title>
+    <script src="objects.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #2c3e50; }
+        .section { background: #f4f4f4; padding: 16px; border-radius: 8px; margin-bottom: 20px; }
+        code { background: #eaeaea; padding: 2px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Objects and Object Arrays</h1>
+    <div class="section">
+        <h2>What is an Object?</h2>
+        <p>An <b>object</b> in JavaScript is a collection of properties, where each property is a key-value pair.</p>
+        <pre><code>let person = {
+    name: "Alice",
+    age: 30
+};</code></pre>
+    </div>
+    <div class="section">
+        <h2>Object Arrays</h2>
+        <p>An <b>object array</b> is an array where each element is an object.</p>
+        <pre><code>let people = [
+    { name: "Bob", age: 25 },
+    { name: "Carol", age: 28 }
+];</code></pre>
+    </div>
+    <div class="section">
+        <h2>Examples</h2>
+        <ul>
+            <li id="objectEx"></li>
+            <li id="arrayEx"></li>
+            <li id="iterateEx"></li>
+        </ul>
+    </div>
+    <script>
+        window.onload = function() {
+            showObjectExamples();
+        };
+    </script>
+</body>
+</html>
