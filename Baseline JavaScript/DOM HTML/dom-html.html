@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript DOM HTML</title>
+    <script src="dom-html.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #2c3e50; }
+        .section { background: #f4f4f4; padding: 16px; border-radius: 8px; margin-bottom: 20px; }
+        code { background: #eaeaea; padding: 2px 6px; border-radius: 4px; }
+        .demo { margin-top: 20px; padding: 10px; background: #eaf7fa; border-radius: 6px; }
+        button { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>JavaScript DOM HTML</h1>
+    <div class="section">
+        <h2>Changing HTML Content</h2>
+        <p>The easiest way to modify the content of an HTML element is by using the <code>innerHTML</code> property.</p>
+        <div class="demo">
+            <p id="p1">Hello World!</p>
+            <button onclick="changeParagraph()">Change Paragraph Text</button>
+        </div>
+        <div class="demo">
+            <h1 id="id01">Old Heading</h1>
+            <button onclick="changeHeading()">Change Heading Text</button>
+        </div>
+    </div>
+    <div class="section">
+        <h2>Changing the Value of an Attribute</h2>
+        <div class="demo">
+            <img id="myImage" src="https://png.pngtree.com/png-clipart/20241230/original/pngtree-playful-smiley-face-clipart-showcasing-a-happy-emoji-suitable-for-use-png-image_18320685.png" alt="Smiley" width="100">
+            <button onclick="changeImage()">Change Image Source</button>
+        </div>
+    </div>
+    <div class="section">
+        <h2>Dynamic HTML Content</h2>
+        <div class="demo">
+            <span id="demo">Date : </span>
+            <button onclick="showDate()">Show Date</button>
+        </div>
+    </div>
+    <div class="section">
+        <h2>document.write()</h2>
+        <button onclick="writeDocument()">Write to Document</button>
+    </div>
+    <script>
+        // Optionally show something on load
+    </script>
+</body>
+</html>

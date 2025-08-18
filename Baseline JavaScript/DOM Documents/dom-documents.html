@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript DOM Documents</title>
+    <script src="dom-documents.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #2c3e50; }
+        .section { background: #f4f4f4; padding: 16px; border-radius: 8px; margin-bottom: 20px; }
+        code { background: #eaeaea; padding: 2px 6px; border-radius: 4px; }
+        .demo { margin-top: 20px; padding: 10px; background: #eaf7fa; border-radius: 6px; }
+        button { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>JavaScript DOM Documents</h1>
+    <div class="section">
+        <h2>What is the Document Object?</h2>
+        <p>The <b>document</b> object represents the whole HTML document. It is the entry point for all DOM manipulation in JavaScript.</p>
+        <ul>
+            <li>Access elements, attributes, and content</li>
+            <li>Modify structure and style</li>
+            <li>Listen for events</li>
+        </ul>
+    </div>
+    <div class="section">
+        <h2>Finding HTML Elements</h2>
+        <table border="1" cellpadding="6" style="border-collapse:collapse; background:#fff;">
+            <tr><th>Method</th><th>Description</th></tr>
+            <tr><td><code>document.getElementById(id)</code></td><td>Find an element by element id</td></tr>
+            <tr><td><code>document.getElementsByTagName(name)</code></td><td>Find elements by tag name</td></tr>
+            <tr><td><code>document.getElementsByClassName(name)</code></td><td>Find elements by class name</td></tr>
+        </table>
+    </div>
+    <div class="section">
+        <h2>Changing HTML Elements</h2>
+        <table border="1" cellpadding="6" style="border-collapse:collapse; background:#fff;">
+            <tr><th>Property/Method</th><th>Description</th></tr>
+            <tr><td><code>element.innerHTML = new html content</code></td><td>Change the inner HTML of an element</td></tr>
+            <tr><td><code>element.attribute = new value</code></td><td>Change the attribute value of an HTML element</td></tr>
+            <tr><td><code>element.style.property = new style</code></td><td>Change the style of an HTML element</td></tr>
+            <tr><td><code>element.setAttribute(attribute, value)</code></td><td>Change the attribute value of an HTML element</td></tr>
+        </table>
+    </div>
+    <div class="section">
+        <h2>Adding and Deleting Elements</h2>
+        <table border="1" cellpadding="6" style="border-collapse:collapse; background:#fff;">
+            <tr><th>Method</th><th>Description</th></tr>
+            <tr><td><code>document.createElement(element)</code></td><td>Create an HTML element</td></tr>
+            <tr><td><code>document.removeChild(element)</code></td><td>Remove an HTML element</td></tr>
+            <tr><td><code>document.appendChild(element)</code></td><td>Add an HTML element</td></tr>
+            <tr><td><code>document.replaceChild(new, old)</code></td><td>Replace an HTML element</td></tr>
+            <tr><td><code>document.write(text)</code></td><td>Write into the HTML output stream</td></tr>
+        </table>
+    </div>
+    <div class="section">
+        <h2>Adding Event Handlers</h2>
+        <table border="1" cellpadding="6" style="border-collapse:collapse; background:#fff;">
+            <tr><th>Method</th><th>Description</th></tr>
+            <tr><td><code>document.getElementById(id).onclick = function(){code}</code></td><td>Adding event handler code to an onclick event</td></tr>
+        </table>
+    </div>
+    <div class="section">
+        <h2>Finding HTML Objects</h2>
+        <table border="1" cellpadding="6" style="border-collapse:collapse; background:#fff;">
+            <tr><th>Property</th><th>Description</th><th>DOM Level</th></tr>
+            <tr><td><code>document.anchors</code></td><td>Deprecated. Do not use it.</td><td>1</td></tr>
+            <tr><td><code>document.applets</code></td><td>Deprecated. Do not use it.</td><td>1</td></tr>
+            <tr><td><code>document.baseURI</code></td><td>Returns the absolute base URI of the document</td><td>3</td></tr>
+            <tr><td><code>document.body</code></td><td>Returns the &lt;body&gt; element</td><td>1</td></tr>
+            <tr><td><code>document.cookie</code></td><td>Returns the document's cookie</td><td>1</td></tr>
+            <tr><td><code>document.doctype</code></td><td>Returns the document's doctype</td><td>3</td></tr>
+            <tr><td><code>document.documentElement</code></td><td>Returns the &lt;html&gt; element</td><td>3</td></tr>
+            <tr><td><code>document.documentMode</code></td><td>Returns the mode used by the browser</td><td>3</td></tr>
+            <tr><td><code>document.documentURI</code></td><td>Returns the URI of the document</td><td>3</td></tr>
+            <tr><td><code>document.domain</code></td><td>Deprecated. Do not use it.</td><td>1</td></tr>
+            <tr><td><code>document.domConfig</code></td><td>Deprecated. Do not use it.</td><td>3</td></tr>
+            <tr><td><code>document.embeds</code></td><td>Returns all &lt;embed&gt; elements</td><td>3</td></tr>
+            <tr><td><code>document.forms</code></td><td>Returns all &lt;form&gt; elements</td><td>1</td></tr>
+            <tr><td><code>document.head</code></td><td>Returns the &lt;head&gt; element</td><td>3</td></tr>
+            <tr><td><code>document.images</code></td><td>Returns all &lt;img&gt; elements</td><td>1</td></tr>
+            <tr><td><code>document.implementation</code></td><td>Returns the DOM implementation</td><td>3</td></tr>
+            <tr><td><code>document.inputEncoding</code></td><td>Returns the document's encoding (character set)</td><td>3</td></tr>
+            <tr><td><code>document.lastModified</code></td><td>Returns the date and time the document was updated</td><td>3</td></tr>
+            <tr><td><code>document.links</code></td><td>Returns all &lt;area&gt; and &lt;a&gt; elements that have a href attribute</td><td>1</td></tr>
+            <tr><td><code>document.readyState</code></td><td>Returns the (loading) status of the document</td><td>3</td></tr>
+            <tr><td><code>document.referrer</code></td><td>Returns the URI of the referrer (the linking document)</td><td>1</td></tr>
+            <tr><td><code>document.scripts</code></td><td>Returns all &lt;script&gt; elements</td><td>3</td></tr>
+            <tr><td><code>document.strictErrorChecking</code></td><td>Returns if error checking is enforced</td><td>3</td></tr>
+            <tr><td><code>document.title</code></td><td>Returns the &lt;title&gt; element</td><td>1</td></tr>
+            <tr><td><code>document.URL</code></td><td>Returns the complete URL of the document</td><td>1</td></tr>
+        </table>
+    </div>
+    <div class="section">
+        <h2>Examples</h2>
+        <ul>
+            <li id="titleEx"></li>
+            <li id="bodyEx"></li>
+            <li id="urlEx"></li>
+            <li id="createEx"></li>
+        </ul>
+        <div class="demo">
+            <button onclick="addParagraph()">Add Paragraph</button>
+            <div id="paragraphs"></div>
+        </div>
+    </div>
+    <script>
+        window.onload = function() {
+            showDocumentExamples();
+        };
+    </script>
+</body>
+</html>
