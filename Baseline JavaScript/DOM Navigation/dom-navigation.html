@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript DOM Navigation</title>
+    <script src="dom-navigation.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #2c3e50; }
+        .section { background: #f4f4f4; padding: 16px; border-radius: 8px; margin-bottom: 20px; }
+        code { background: #eaeaea; padding: 2px 6px; border-radius: 4px; }
+        .demo { margin-top: 20px; padding: 10px; background: #eaf7fa; border-radius: 6px; }
+        button { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>JavaScript DOM Navigation</h1>
+    <div class="section">
+        <h2>DOM Nodes</h2>
+        <p>Everything in an HTML document is a node: document node, element node, text node, attribute node (deprecated), and comment node.</p>
+        <pre><code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;DOM Tutorial&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;DOM Lesson one&lt;/h1&gt;
+    &lt;p&gt;Hello world!&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+    <div class="section">
+        <h2>Node Relationships</h2>
+        <ul>
+            <li><b>Parent</b>: The node above</li>
+            <li><b>Child</b>: The node below</li>
+            <li><b>Sibling</b>: Nodes with the same parent</li>
+        </ul>
+        <p>Example: <code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code> are siblings, both children of <code>&lt;body&gt;</code>.</p>
+    </div>
+    <div class="section">
+        <h2>Navigating Between Nodes</h2>
+        <ul>
+            <li><code>parentNode</code></li>
+            <li><code>childNodes[nodenumber]</code></li>
+            <li><code>firstChild</code></li>
+            <li><code>lastChild</code></li>
+            <li><code>nextSibling</code></li>
+            <li><code>previousSibling</code></li>
+        </ul>
+    </div>
+    <div class="section">
+        <h2>Demo: Node Value Access</h2>
+        <div class="demo">
+            <h1 id="demoH1">DOM Lesson one</h1>
+            <p id="demoP">Hello world!</p>
+            <button onclick="copyH1Text()">Copy H1 Text to P</button>
+            <div id="resultDemo"></div>
+        </div>
+        <div class="demo">
+            <button onclick="showNodeNavigation()">Show Node Navigation</button>
+            <div id="navDemo"></div>
+        </div>
+    </div>
+    <script>
+        // Optionally show something on load
+    </script>
+</body>
+</html>

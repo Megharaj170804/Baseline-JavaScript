@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript DOM Event Listeners</title>
+    <script src="dom-event-listener.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #2c3e50; }
+        .section { background: #f4f4f4; padding: 16px; border-radius: 8px; margin-bottom: 20px; }
+        code { background: #eaeaea; padding: 2px 6px; border-radius: 4px; }
+        .demo { margin-top: 20px; padding: 10px; background: #eaf7fa; border-radius: 6px; }
+        button { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>JavaScript DOM Event Listeners</h1>
+    <div class="section">
+        <h2>The addEventListener() Method</h2>
+        <p>The <code>addEventListener()</code> method attaches event handlers to elements without overwriting existing handlers. You can add multiple handlers of the same or different types, and even to the window object.</p>
+        <pre><code>element.addEventListener(event, function, useCapture);</code></pre>
+    </div>
+    <div class="section">
+        <h2>Examples</h2>
+        <div class="demo">
+            <button id="btn1">Click Me (Anonymous Function)</button>
+            <button id="btn2">Click Me (Named Function)</button>
+            <button id="btn3">Click Me (Multiple Handlers)</button>
+            <button id="btn4">Mouse Over/Out</button>
+            <button id="btn5">Remove Listener</button>
+            <div id="listenerDemo"></div>
+        </div>
+        <div class="demo">
+            <div id="outerDiv" style="padding:10px; background:#fff; border:1px solid #ccc;">
+                <p id="innerP" style="margin:0;">Click me for bubbling/capturing demo</p>
+            </div>
+            <div id="bubbleDemo"></div>
+        </div>
+        <div class="demo">
+            <button id="resizeBtn">Resize Window</button>
+            <div id="resizeDemo"></div>
+        </div>
+        <div class="demo">
+            <button id="paramBtn">Pass Parameters</button>
+            <div id="paramDemo"></div>
+        </div>
+    </div>
+    <script>
+        // Optionally show something on load
+    </script>
+</body>
+</html>
